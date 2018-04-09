@@ -21,7 +21,7 @@ export const query = graphql`
           firstName: firstname
           lastName: lastname
           position
-          email
+          email 
           experienceLevel: pleasecheckallthatapplytothetargetlevelofeducationandorcareerexperienceyourprogramseekstoattract
           organization
           nameOfProgram: nameofprogram
