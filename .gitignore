@@ -1,3 +1,6 @@
+# Client secrets
+client_secret.json
+
 # Logs
 logs
 *.log
