@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const Div = styled.div`
     display: flex;
-    align-self: center;
+    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 `;
 
 const H2 = styled.h2`
@@ -13,14 +14,30 @@ const H2 = styled.h2`
 `;
 
 const A = styled.a`
+  background: #fecb2f;
+  background-image: -webkit-linear-gradient(top, #fecb2f, #edbc2b);
+  background-image: -moz-linear-gradient(top, #fecb2f, #edbc2b);
+  background-image: -ms-linear-gradient(top, #fecb2f, #edbc2b);
+  background-image: -o-linear-gradient(top, #fecb2f, #edbc2b);
+  background-image: linear-gradient(to bottom, #fecb2f, #edbc2b);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  border: solid #cfa62c 1px;
   font-weight: bold;
   font-size: 16px;
   color: black;
   text-decoration: none;
-  background-color: lightgrey;
-  box-shadow: 0 0 2px #ddd;
-  border-radius: 7px;
   padding: 7px;
+  &:hover {
+    background: #ffd452;
+    background-image: -webkit-linear-gradient(top, #ffd452, #fecb2f);
+    background-image: -moz-linear-gradient(top, #ffd452, #fecb2f);
+    background-image: -ms-linear-gradient(top, #ffd452, #fecb2f);
+    background-image: -o-linear-gradient(top, #ffd452, #fecb2f);
+    background-image: linear-gradient(to bottom, #ffd452, #fecb2f);
+    text-decoration: none;
+  }
 `;
 
 const Navigation = () => (
@@ -30,7 +47,7 @@ const Navigation = () => (
       href="https://docs.google.com/forms/d/e/1FAIpQLSem2TOPIt8e72pK7xQ6CI5bBIPADGjYIM5V4QVZ8CpWSbYZyA/viewform?c=0&w=1"
       target="_blank"
       >
-      Add a listing
+      Add your program
     </A>
   </Div>
 );

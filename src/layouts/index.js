@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import "../styles/normalize.css"
+import "../styles/base.css"
 
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
@@ -13,7 +14,9 @@ const Wrapper = styled.div`
   grid-template-areas: "navigation"
                        "content"
                        "footer";
+  grid-gap: 10px;
   margin: auto;
+  padding: 0 10px 0 10px;
   max-width: 960px;
 `;
 
