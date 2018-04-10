@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Project12`
+    title: `Leadership Development Directory`
   },
   plugins: [
     {
@@ -25,7 +25,6 @@ module.exports = {
           credentials: require('./client_secret.json')
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

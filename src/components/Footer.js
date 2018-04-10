@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Div = styled.div`
-  grid-area: footer;
-  background-color: grey;
+    display: flex;
+    align-self: center;
 `;
 
 const Footer = () => (

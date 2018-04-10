@@ -2,6 +2,7 @@ import React from "react";
 import matchSorter from 'match-sorter'
 import ReactTable from "react-table";
 import "react-table/react-table.css";
+import styled from "styled-components";
 
 
 export default ({ data }) => (
@@ -10,16 +11,15 @@ export default ({ data }) => (
       data={data.allGoogleSheetFormResponses1Row.edges.map(x => x.node)}
       columns={[
         {
-          Header: "Name",
+          Header: 'Details',
           columns: [
             {
-              Header: "First Name",
-              accessor: "firstName"
+              Header: "Program",
+              accessor: "nameOfProgram"
             },
             {
-              Header: "Last Name",
-              id: "lastName",
-              accessor: d => d.lastName
+              Header: "Organization",
+              accessor: "organization"
             }
           ]
         },
@@ -38,19 +38,6 @@ export default ({ data }) => (
               Header: "Commitment",
               accessor: "commitment"
             },
-          ]
-        },
-        {
-          Header: 'Details',
-          columns: [
-            {
-              Header: "Program",
-              accessor: "nameOfProgram"
-            },
-            {
-              Header: "Organization",
-              accessor: "organization"
-            }
           ]
         }
       ]}
