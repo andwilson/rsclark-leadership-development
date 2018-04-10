@@ -15,35 +15,61 @@ export default ({ data }) => (
     <ReactTable
       data={data.allGoogleSheetFormResponses1Row.edges.map(x => x.node)}
       filterable
+      defaultFilterMethod={(filter, row) =>
+            String(row[filter.id]) === filter.value}
       columns={[
         {
           Header: "Leadership Development Programs",
           columns: [
             {
               Header: "Program",
-              accessor: "nameOfProgram"
+              accessor: "nameOfProgram",
+              filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["nameOfProgram"] }),
+              filterAll: true
             },
             {
               Header: "Organization",
-              accessor: "organization"
+              accessor: "organization",
+              filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["organization"] }),
+              filterAll: true
             },
             {
               Header: "Level",
-              accessor: "experienceLevel"
+              accessor: "experienceLevel",
+              filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["experienceLevel"] }),
+              filterAll: true
             },
             {
               Header: "Focus",
-              accessor: "focus"
+              accessor: "focus",
+              filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["focus"] }),
+              filterAll: true
             },
             {
               Header: "Commitment",
-              accessor: "commitment"
+              accessor: "commitment",
+              filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["commitment"] }),
+              filterAll: true
             }
           ]
         }
       ]}
       className="-striped -highlight"
       defaultPageSize={10}
+      SubComponent={row => {
+        return (
+          <div style={{ padding: "20px" }}>
+            <em>
+              Program details!!!
+            </em>
+          </div>
+        );
+      }}
     />
   </div>
 );
