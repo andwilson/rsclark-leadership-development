@@ -9,9 +9,12 @@ export default ({ data }) => (
   <div>
     <ReactTable
       data={data.allGoogleSheetFormResponses1Row.edges.map(x => x.node)}
+      filterable
+      defaultFilterMethod={(filter, row) =>
+        String(row[filter.id]) === filter.value}
       columns={[
         {
-          Header: 'Details',
+          Header: `${data.allGoogleSheetFormResponses1Row.totalCount} Programs`,
           columns: [
             {
               Header: "Program",
@@ -24,7 +27,7 @@ export default ({ data }) => (
           ]
         },
         {
-          Header: "Info",
+          Header: "Filters",
           columns: [
             {
               Header: "Experience",
@@ -41,6 +44,7 @@ export default ({ data }) => (
           ]
         }
       ]}
+      className="-striped -highlight"
       defaultPageSize={15}
     />
   </div>
