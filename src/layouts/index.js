@@ -4,6 +4,7 @@ import styled from "styled-components";
 import "../styles/normalize.css"
 import "../styles/base.css"
 
+import Background from "../components/Background"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
 

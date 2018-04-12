@@ -9,6 +9,8 @@ const Div = styled.div`
 `;
 
 const H2 = styled.h2`
+  font-size: 20px;
+  color: #015a84;
   margin: 0;
   padding: 0;
 `;
